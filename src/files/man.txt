@@ -1,0 +1,23 @@
+#Quick manual#
+
+Train commands:
+>> "login : train<nr>"
+>> "start"
+>> "delay+<minutes>"  or "delay-<minutes>"
+>> "undo"
+>> "reset"
+>> "logout"
+>> "quit"
+Dispatcher commands:
+>> "login : dispatcher"
+>> "get agenda train<nr>"
+>> "get info train<nr>"
+>> "get line train<nr>"
+>> "get -all"
+>> "get -today -all" 
+>> "get -hour -leavings"
+>> "get -hour -arrivals"
+>> "get info trains"
+>> "logout"
+>> "quit" 
+For help : "m" or "man"

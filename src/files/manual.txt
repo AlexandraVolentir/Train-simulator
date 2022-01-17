@@ -1,0 +1,26 @@
+##Complete mainual for user##
+
+Train commands:
+>> "login : train<nr>" -- logins the train. You need to enter the number of the train you want to login at the end. The number of trains ranges from 0 to 43. Obs: you can't effectuate any "manipulation" with train time or moving until you've logged in.
+>> "start" -- starts the train with wich you logged in. Pressing "start", you give the train a manual push. Obs: you cannot effectuate "delay", "undo", "reset" operations if you haven't started the train yet.
+>> "delay+<minutes>"  or "delay-<minutes>" -- at each stop you should enter the delay in order to give the train the push to the next station. It can be related with technical issues, actual delay or passenger waiting. A positive delay is the actual delay. The negative delay means that the train arrived earlier at the station. If you have no delay you can simply enter "delay0". Over each station, if you enter multiple delays, they will build up.
+>> "undo" -- the undo operation undos the delays that you entered. If you did 3 delays with the values +4, +5, +12, an undo operation will substract 12 from the total delay time. The second undo will substract 5 and so forth.
+>> "reset" -- resets the total delay value to 0, and, respectively, recalculates the arrival and leaving time accordingly.
+>> "logout" - logs out the user (the login flag is set to 0). He can no longer access train-specific commands.
+>> "quit" -- the thread of the client stops it's execution
+
+
+Dispatcher commands:
+>> "login : dispatcher" -- logins the dispatcher, giving the login flag the number of the thread on which the dispatcher is connected. There can be only one dispatcher.
+>> "get agenda train<nr>" -- gets the table for the curent situation of the train (nr of the stations, stations  name, the number of minutes until the next station, actual delay, time until reaching terminus, and the time of leaving)
+>> "get info train<nr>" -- outputs information about the nr assigned to the train, the origin and destination stations, the personal code, the passed kilometrage, the length of the train, the code of the owner, the rank and tonnage.
+>> "get line train<nr>" -- fetches the basic route of the train with the stations numerotated in the order of their traversal.
+>> "get -all" -- fetches ALL the information on the curent schedule. Precisely, the origin and destination station names, the date and time of leaving, the name of the station, the nr of the station in the route, delay in minutes, and state ("Sleeping" when the train haven't been started yet and "Running" when the train was started and is active).
+>> "get -today -all" -- similar to "get -all" but it only fetches information about trains that run from this hour till midnight.
+>> "get -hour -leavings" -- fetches the information on the leavings that will take place THIS hour. Precisely, the information fetched will include: the origin and destination station names, the date and time of leaving, the name of the station, the nr of the station in the route, delay in minutes, and state ("Sleeping" when the train haven't been started yet and "Running" when the train was started and is active).
+>> "get -hour -arrivals" -- fetches the information on the arrivals that will take place THIS hour. Precisely, the information fetched will include: the origin and destination station names, the date and time of arrival, the name of the station, the nr of the station in the route, delay in minutes, and state ("Sleeping" when the train haven't been started yet and "Running" when the train was started and is active).
+>> "get info trains" -- fetches information about ALL the trains, including: the order number assigned to the train, the origin and destination stations, the personal code, the passed kilometrage, the length of the train, the code of the owner, the rank and tonnage.
+>> "logout" -- logs out the dispatcher, he will no longer be able to fetch data about the trains.
+>> "quit" -- quit the server
+
+For help : "m" or "man"
