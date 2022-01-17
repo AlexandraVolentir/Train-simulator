@@ -1,4 +1,4 @@
-##Complete mainual for user##
+##Complete manual for user##
 
 Train commands:
 >> "login : train<nr>" -- logins the train. You need to enter the number of the train you want to login at the end. The number of trains ranges from 0 to 43. Obs: you can't effectuate any "manipulation" with train time or moving until you've logged in.
