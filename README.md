@@ -14,16 +14,18 @@ We will implement a concurrent server which would fetch and send back
 live information about ongoing routes taken by the trains. So, there would be
 a smart concurrent server and two types of clients: the train drivers and the dispatcher.
 
-Train conductors.
+##Train conductors
 They will give concrete information about when they
 have started their trains with a manual push, about when they arrive to a
 station, so that the server can calculate its estimation on time arrivals and
 everything else accordingly.
-Train dispatcher. It fetches from the server information about ongoing
+
+##Train dispatcher
+It fetches from the server information about ongoing
 delays, leavings and arrivals. It has a protocol through which he communicates
 with the server.
 
-The server. 
+##The server 
 The server would receive information from the train’s movement and calculate if the 
 train arrives differently than it’s prefixed schedule depending on the calculations
 of the server based on the train driver’s received information. 
