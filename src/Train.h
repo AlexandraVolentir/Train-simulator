@@ -3,7 +3,6 @@
 #include <stdio.h>
 #include <stdlib.h>
 #include <vector>
-#include <random>
 #include <ctime>
 #include <cerrno>
 #include <time.h>
@@ -15,8 +14,6 @@
 #include <string>
 #include <algorithm>
 #include <cstddef>
-#define LOWER_LIMIT 2
-#define UPPER_LIMIT 10
 #define MESSAGE_SIZE 6000
 pthread_mutex_t lock = PTHREAD_MUTEX_INITIALIZER;
 
